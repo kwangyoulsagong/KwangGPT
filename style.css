@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Add a background color to the chat screen */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #ffffff;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  .logo-container
+  {
+    width: 100%;
+    text-align: center;
+  }
+
+
+  #loading {
+    font-size: 50px;
+  }
+
+  /* Style the chat box */
+  .kwangGPT {
+    margin: 0 auto;
+    width: 600px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: calc(100vh - 250px);
+    height: calc(100vh - 250px);
+  }
+
+  /* Style the chat box header */
+  .header {
+    background-color: #252626;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  /* Style the chat box body */
+  .kwangGPT-body {
+    padding: 16px;
+    overflow-y: auto;
+    height: calc(100% - 145px);
+    background: #72d8ef;
+  }
+  
+  /* Style the chat messages */
+  .kwangGPT-body .message,
+  .kwangGPT-body .response {
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  
+  /* Style the user's messages */
+  .kwangGPT-body .message {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  /* Style the chatbot's responses */
+  .kwangGPT-body .response {
+    background-color: #f7e62c;
+    color: #333333;
+    text-align: right;
+  }
+  
+  /* Style the chat box footer */
+  .kwangGPT-footer {
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-top: 1px solid #e6e6e6;
+    padding: 8px 16px;
+  }
+  
+  /* Style the input field */
+  .kwangGPT-footer input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Style the button */
+  .kwangGPT-footer button {
+    margin-left: 8px;
+    padding: 8px 16px;
+    background-color: #222323;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Add some hover effects to the button */
+  .kwangGPT-footer button:hover {
+    background-color: #7fdf30;
+  }
+  
+  .kwangGPT-footer button:active {
+    background-color: #3cbdda;
+  }
