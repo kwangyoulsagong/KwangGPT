@@ -10,7 +10,7 @@ app.use(cors());
 const PORT=process.env.PORT || 3000
 
 const config = new Configuration({
-    apiKey: process.env.API
+    apiKey: process.env.API-TOKEN
 });
 
 const openai = new OpenAIApi(config);
