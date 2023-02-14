@@ -30,7 +30,7 @@ function sendMessage() {
         if ( wait.innerHTML.length > 3 )
             window.dotsGoingUp = false;
         }, 250);
-  fetch("https://kwanggpt.onrender.com/message", {
+  fetch('https://kwanggpt.onrender.com/messages', {
     method: 'POST',
     headers: {
       accept: 'application.json',

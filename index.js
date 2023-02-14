@@ -9,14 +9,16 @@ app.use(bodyParser.json());
 app.use(cors());
 const PORT=process.env.PORT || 3000
 
-const config = new Configuration({
-    apiKey: process.env.APITOKEN
+
+const configuration = new Configuration({
+    organization: "org-Sj3OdDKiO8FRLsUTE1Dn99r1",
+    apiKey: "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",
 });
 
-const openai = new OpenAIApi(config);
+const openai = new OpenAIApi(configuration);
 
-app.post('/message', (req, res) => {
-    const response = openai.createCompletion({
+app.post('/message', async (req, res) => {
+    const response = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: req.body.message,
         temperature: 0,
@@ -25,13 +27,15 @@ app.post('/message', (req, res) => {
         presence_penalty: 0,
         max_tokens: 256
     });
+    console.log(response.data)
 
-    response.then((data) => {
-        const message = {message: data.data.choices[0].text};
-        res.send(message);
-    }).catch((err) => {
-        res.send(err);
-    });
+    if(response.data){
+        if(response.data.choices){
+            res.json({
+                message: response.data.choices[0].text
+            })
+        }
+    }
 });
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
