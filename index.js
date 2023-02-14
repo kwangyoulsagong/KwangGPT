@@ -17,7 +17,7 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-app.post('/message', async (req, res) => {
+app.post('https://kwanggpt.onrender.com/message', async (req, res) => {
     const response = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: req.body.message,
